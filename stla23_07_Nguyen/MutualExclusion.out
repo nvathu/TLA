@@ -1,0 +1,141 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 40 and seed -6109004530922109412 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\CNTT\TLA+\stla23_07_Nguyen\MutualExclusion.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Naturals.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Sequences.tla
+Parsing file D:\CNTT\TLA+\stla23_07_Nguyen\Semaphores.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Semaphores
+Semantic processing of module MutualExclusion
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2024-01-05 16:57:04)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2024-01-05 16:57:04.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 1000:1 @!@!@
+TLC threw an unexpected exception.
+This was probably caused by an error in the spec or model.
+See the User Output or TLC Console for clues to what happened.
+The exception was a java.lang.RuntimeException
+: @!@!@STARTMSG 2280:0 @!@!@
+In evaluation, the identifier semaphores is either undefined or not an operator.
+line 15, col 10 to line 15, col 19 of module MutualExclusion
+@!@!@ENDMSG 2280 @!@!@
+@!@!@ENDMSG 1000 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ semaphores = <<1, 1, 1>>
+/\ pc = <<2, 2, 2>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 14, column 5 to line 20, column 33 in MutualExclusion
+1. Line 14, column 8 to line 14, column 46 in MutualExclusion
+2. Line 14, column 8 to line 14, column 16 in MutualExclusion
+3. Line 14, column 21 to line 14, column 46 in MutualExclusion
+4. Line 15, column 8 to line 15, column 23 in MutualExclusion
+5. Line 4, column 9 to line 5, column 19 in Semaphores
+6. Line 4, column 12 to line 4, column 16 in Semaphores
+7. Line 5, column 12 to line 5, column 19 in Semaphores
+8. Line 5, column 12 to line 5, column 13 in Semaphores
+9. Line 5, column 12 to line 5, column 12 in Semaphores
+10. Line 15, column 10 to line 15, column 22 in MutualExclusion
+11. Line 15, column 10 to line 15, column 19 in MutualExclusion
+
+
+@!@!@ENDMSG 2103 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2024-01-05 16:57:04
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 8, col 1 to line 8, col 4 of module MutualExclusion>: 1:1
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 9, col 5 to line 10, col 38 of module MutualExclusion: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Process line 13, col 1 to line 13, col 10 of module MutualExclusion>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 14, col 8 to line 14, col 16 of module MutualExclusion: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 14, col 21 to line 14, col 46 of module MutualExclusion: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 14, col 27 to line 14, col 46 of module MutualExclusion: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 4, col 9 to line 5, col 19 of module Semaphores: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 15, col 10 to line 15, col 22 of module MutualExclusion: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 15, col 10 to line 15, col 19 of module MutualExclusion: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 15, col 21 to line 15, col 21 of module MutualExclusion: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 16, col 8 to line 16, col 33 of module MutualExclusion: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 18, col 21 to line 18, col 46 of module MutualExclusion: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 8 to line 20, col 33 of module MutualExclusion: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<MutExInvariant line 25, col 1 to line 25, col 14 of module MutualExclusion>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 5 to line 26, col 53 of module MutualExclusion: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 26, col 23 to line 26, col 53 of module MutualExclusion: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 26, col 23 to line 26, col 27 of module MutualExclusion: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 26, col 32 to line 26, col 53 of module MutualExclusion: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 26, col 17 to line 26, col 20 of module MutualExclusion: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(1) at 2024-01-05 16:57:04: 1 states generated (55 s/min), 1 distinct states found (55 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+1 states generated, 1 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1089ms at (2024-01-05 16:57:04)
+@!@!@ENDMSG 2186 @!@!@

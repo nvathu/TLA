@@ -1,0 +1,127 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 112 and seed 8139712680938975783 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\CNTT\TLA+\stla23_08_Nguyen\MQTT.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Integers.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Sequences.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module MQTT
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2024-01-12 17:10:26)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2024-01-12 17:10:27.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2109:1 @!@!@
+Successor state is not completely specified by action ProduceMessage of the next-state relation. The following variables are not assigned: broker, consumer.
+
+@!@!@ENDMSG 2109 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ packetIds = <<>>
+/\ consumer = <<>>
+/\ producer = <<>>
+/\ broker = <<>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <ProduceMessage line 23, col 5 to line 24, col 57 of module MQTT>
+/\ packetIds = <<1>>
+/\ consumer = null
+/\ producer = <<<<1>>>>
+/\ broker = null
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2024-01-12 17:10:27
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 8, col 1 to line 8, col 4 of module MQTT>: 1:1
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 9, col 5 to line 12, col 23 of module MQTT: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ProduceMessage line 22, col 1 to line 22, col 14 of module MQTT>: 0:2
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 8 to line 23, col 59 of module MQTT: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 20 to line 23, col 59 of module MQTT: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 24, col 8 to line 24, col 57 of module MQTT: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 24, col 21 to line 24, col 57 of module MQTT: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<BrokerReceiveMessage line 26, col 1 to line 26, col 20 of module MQTT>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 16 to line 28, col 62 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 29, col 16 to line 29, col 41 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 16 to line 30, col 31 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 8 to line 31, col 29 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<ConsumerReceiveMessage line 33, col 1 to line 33, col 22 of module MQTT>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 16 to line 35, col 64 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 16 to line 36, col 37 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 16 to line 37, col 35 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 8 to line 38, col 29 of module MQTT: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeInvariant line 14, col 1 to line 14, col 13 of module MQTT>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 15, col 5 to line 20, col 54 of module MQTT: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(1) at 2024-01-12 17:10:27: 2 states generated (89 s/min), 1 distinct states found (44 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+2 states generated, 1 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 1.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1354ms at (2024-01-12 17:10:27)
+@!@!@ENDMSG 2186 @!@!@

@@ -1,0 +1,171 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 116 and seed 6913781129383301403 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\CNTT\TLA+\stla_assignment_02\Version1.tla
+Parsing file D:\CNTT\TLA+\stla_assignment_02\Channel.tla
+Parsing file D:\CNTT\TLA+\stla_assignment_02\HourClock.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Channel
+Semantic processing of module HourClock
+Semantic processing of module Version1
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-11-17 21:32:34)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2140:3 @!@!@
+The subscript of the next-state relation specified by the specification
+does not seem to contain the state variable hr
+@!@!@ENDMSG 2140 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 64 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 128 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 256 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 288 distinct states generated at 2023-11-17 21:32:35.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2193:0 @!@!@
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 4.9E-15
+@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-11-17 21:32:35
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<InitV1 line 6, col 1 to line 6, col 6 of module Version1>: 288:576
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 4, col 22 to line 4, col 34 of module Version1: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 4, col 12 to line 4, col 27 of module HourClock: 288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 4, col 20 to line 4, col 26 of module HourClock: 48
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 7, col 14 to line 7, col 17 of module Version1: 576
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TickSend line 9, col 1 to line 9, col 8 of module Version1>: 24:288
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 5, col 12 to line 5, col 46 of module HourClock: 288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 5, col 18 to line 5, col 46 of module HourClock: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 5, col 21 to line 5, col 27 of module HourClock: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 5, col 34 to line 5, col 39 of module HourClock: 286
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 11, col 16 to line 11, col 34 of module Channel: 600
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 11, col 16 to line 11, col 23 of module Channel: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 11, col 27 to line 11, col 34 of module Channel: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 12, col 16 to line 12, col 61 of module Channel: 288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 10, col 21 to line 10, col 22 of module Version1: 288
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<TickReceive line 12, col 1 to line 12, col 11 of module Version1>: 0:24
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 14, col 16 to line 14, col 34 of module Channel: 336
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 14, col 16 to line 14, col 23 of module Channel: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 14, col 27 to line 14, col 34 of module Channel: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 15, col 16 to line 15, col 50 of module Channel: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 20 to line 6, col 70 of module Channel: 48
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 6, col 20 to line 6, col 23 of module Channel: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 6, col 29 to line 6, col 70 of module Channel: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 5, col 12 to line 5, col 46 of module HourClock: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 5, col 18 to line 5, col 46 of module HourClock: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 5, col 21 to line 5, col 27 of module HourClock: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 5, col 34 to line 5, col 39 of module HourClock: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeInvariantV1 line 4, col 1 to line 4, col 15 of module Version1>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 4, col 22 to line 4, col 43 of module Version1: 312
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(2) at 2023-11-17 21:32:35: 600 states generated (66,914 s/min), 312 distinct states found (34,795 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+600 states generated, 312 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 2.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 0 (minimum is 0, the maximum 1 and the 95th percentile is 1).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 540ms at (2023-11-17 21:32:35)
+@!@!@ENDMSG 2186 @!@!@

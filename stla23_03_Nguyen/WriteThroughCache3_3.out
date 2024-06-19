@@ -1,0 +1,426 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 15 and seed 4028762059831140636 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\CNTT\TLA+\submit file\stla23_03_Nguyen\WriteThroughCache3_3.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Naturals.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Sequences.tla
+Parsing file D:\CNTT\TLA+\submit file\stla23_03_Nguyen\MemoryInterface.tla
+Parsing file D:\CNTT\TLA+\submit file\stla23_03_Nguyen\InternalMemory.tla
+Parsing file D:\CNTT\TLA+\submit file\stla23_03_Nguyen\Memory.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module MemoryInterface
+Semantic processing of module InternalMemory
+Semantic processing of module Memory
+Semantic processing of module WriteThroughCache3_3
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-11-24 22:45:00)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 2 distinct states generated at 2023-11-24 22:45:01.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2184:1 @!@!@
+Attempted to apply Head to the empty sequence.
+@!@!@ENDMSG 2184 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ ctl = (p1 :> "rdy" @@ p2 :> "rdy")
+/\ memInt = <<p1, NoVal>>
+/\ wmem = (a1 :> v1)
+/\ rdQ = <<>>
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memQ = <<>>
+/\ cache = (p1 :> (a1 :> NoVal) @@ p2 :> (a1 :> NoVal))
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Req line 25, col 11 to line 25, col 51 of module WriteThroughCache3_3>
+/\ ctl = (p1 :> "busy" @@ p2 :> "rdy")
+/\ memInt = <<p1, [op |-> "Rd", adr |-> a1]>>
+/\ wmem = (a1 :> v1)
+/\ rdQ = <<>>
+/\ buf = (p1 :> [op |-> "Rd", adr |-> a1] @@ p2 :> NoVal)
+/\ memQ = <<>>
+/\ cache = (p1 :> (a1 :> NoVal) @@ p2 :> (a1 :> NoVal))
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <RdMiss line 28, col 15 to line 33, col 59 of module WriteThroughCache3_3>
+/\ ctl = (p1 :> "waiting" @@ p2 :> "rdy")
+/\ memInt = <<p1, [op |-> "Rd", adr |-> a1]>>
+/\ wmem = (a1 :> v1)
+/\ rdQ = <<>>
+/\ buf = (p1 :> [op |-> "Rd", adr |-> a1] @@ p2 :> NoVal)
+/\ memQ = <<<<p1, [op |-> "Rd", adr |-> a1]>>>>
+/\ cache = (p1 :> (a1 :> NoVal) @@ p2 :> (a1 :> NoVal))
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2103:1 @!@!@
+The error occurred when TLC was evaluating the nested
+expressions at the following positions:
+0. Line 74, column 7 to line 78, column 49 in WriteThroughCache3_3
+1. Line 74, column 10 to line 74, column 41 in WriteThroughCache3_3
+2. Line 74, column 11 to line 74, column 22 in WriteThroughCache3_3
+3. Line 74, column 30 to line 74, column 40 in WriteThroughCache3_3
+4. Line 75, column 10 to line 75, column 27 in WriteThroughCache3_3
+5. Line 76, column 10 to line 76, column 39 in WriteThroughCache3_3
+6. Line 77, column 10 to line 77, column 56 in WriteThroughCache3_3
+7. Line 77, column 19 to line 77, column 56 in WriteThroughCache3_3
+8. Line 77, column 47 to line 77, column 55 in WriteThroughCache3_3
+
+
+@!@!@ENDMSG 2103 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-11-24 22:45:01
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 8, col 1 to line 8, col 4 of module WriteThroughCache3_3>: 4:4
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 5, col 13 to line 5, col 30 of module InternalMemory: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 13 to line 6, col 40 of module InternalMemory: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 7, col 13 to line 7, col 40 of module InternalMemory: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 8, col 13 to line 8, col 33 of module InternalMemory: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 9, col 12 to line 9, col 58 of module WriteThroughCache3_3: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 10, col 12 to line 10, col 23 of module WriteThroughCache3_3: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 11, col 12 to line 11, col 22 of module WriteThroughCache3_3: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Req line 25, col 1 to line 25, col 6 of module WriteThroughCache3_3>: 51:57
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 15, col 14 to line 15, col 27 of module InternalMemory: 53
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 15, col 14 to line 15, col 19 of module InternalMemory: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 17, col 17 to line 19, col 52 of module InternalMemory: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 16, col 26 to line 16, col 29 of module InternalMemory: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 14 to line 20, col 26 of module InternalMemory: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 17 to line 25, col 17 of module WriteThroughCache3_3: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 23 to line 25, col 51 of module WriteThroughCache3_3: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Rsp line 26, col 1 to line 26, col 6 of module WriteThroughCache3_3>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 45 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 45 of module WriteThroughCache3_3: 57
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 45 of module WriteThroughCache3_3: 124
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 45 of module WriteThroughCache3_3: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 45 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 45 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 14 to line 33, col 28 of module InternalMemory: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 14 to line 35, col 44 of module InternalMemory: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 14 to line 36, col 35 of module InternalMemory: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 17 to line 26, col 17 of module WriteThroughCache3_3: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 23 to line 26, col 51 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<RdMiss line 28, col 1 to line 28, col 9 of module WriteThroughCache3_3>: 4:5
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 19 to line 28, col 33 of module WriteThroughCache3_3: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 28, col 19 to line 28, col 24 of module WriteThroughCache3_3: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 28, col 40 to line 28, col 55 of module WriteThroughCache3_3: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 28, col 40 to line 28, col 48 of module WriteThroughCache3_3: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 29, col 18 to line 29, col 45 of module WriteThroughCache3_3: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 29, col 18 to line 29, col 37 of module WriteThroughCache3_3: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 29, col 41 to line 29, col 45 of module WriteThroughCache3_3: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 18 to line 30, col 33 of module WriteThroughCache3_3: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 18 to line 31, col 52 of module WriteThroughCache3_3: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 32, col 18 to line 32, col 53 of module WriteThroughCache3_3: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 18 to line 33, col 59 of module WriteThroughCache3_3: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<DoRd line 35, col 1 to line 35, col 7 of module WriteThroughCache3_3>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 6 to line 36, col 34 of module WriteThroughCache3_3: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 6 to line 37, col 21 of module WriteThroughCache3_3: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 6 to line 38, col 33 of module WriteThroughCache3_3: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 6 to line 39, col 52 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 6 to line 40, col 38 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 6 to line 41, col 48 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<DoWr line 43, col 1 to line 43, col 7 of module WriteThroughCache3_3 (45 7 54 39)>: 8:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 11 to line 45, col 25 of module WriteThroughCache3_3: 40
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 11 to line 45, col 16 of module WriteThroughCache3_3: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 32 to line 45, col 42 of module WriteThroughCache3_3: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 45, col 32 to line 45, col 35 of module WriteThroughCache3_3: 12
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 10 to line 46, col 25 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 10 to line 50, col 37 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 10 to line 51, col 39 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 10 to line 52, col 41 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 10 to line 53, col 42 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 10 to line 54, col 39 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MemQWr line 65, col 1 to line 65, col 6 of module WriteThroughCache3_3 (66 15 69 58)>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 19 to line 66, col 30 of module WriteThroughCache3_3: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 40 to line 66, col 50 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 18 to line 67, col 55 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 18 to line 68, col 35 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 18 to line 69, col 58 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MemQRd line 71, col 1 to line 71, col 6 of module WriteThroughCache3_3 (74 7 78 49)>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 11 to line 74, col 22 of module WriteThroughCache3_3: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 30 to line 74, col 40 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 10 to line 75, col 27 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 75, col 18 to line 75, col 27 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 10 to line 76, col 39 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 76, col 17 to line 76, col 39 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 77, col 10 to line 77, col 56 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 77, col 19 to line 77, col 56 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 10 to line 78, col 49 of module WriteThroughCache3_3: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Evict line 81, col 1 to line 81, col 10 of module WriteThroughCache3_3>: 0:30
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 18 to line 81, col 57 of module WriteThroughCache3_3: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 81, col 19 to line 81, col 36 of module WriteThroughCache3_3: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 81, col 43 to line 81, col 56 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 18 to line 82, col 56 of module WriteThroughCache3_3: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 83, col 18 to line 83, col 63 of module WriteThroughCache3_3: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeInvariant line 13, col 1 to line 13, col 13 of module WriteThroughCache3_3>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 14, col 3 to line 19, col 23 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<Coherence line 21, col 1 to line 21, col 9 of module WriteThroughCache3_3>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 21, col 14 to line 23, col 50 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 22, col 17 to line 23, col 50 of module WriteThroughCache3_3: 260
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 22, col 18 to line 22, col 56 of module WriteThroughCache3_3: 260
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 23, col 27 to line 23, col 49 of module WriteThroughCache3_3: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 21, col 26 to line 21, col 29 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 21, col 38 to line 21, col 40 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<LM_Inner_TypeInvariant line 147, col 1 to line 147, col 22 of module WriteThroughCache3_3>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 147, col 27 to line 147, col 66 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 1 to line 95, col 21 of module WriteThroughCache3_3: 270
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 1 to line 95, col 21 of module WriteThroughCache3_3: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 1 to line 95, col 21 of module WriteThroughCache3_3: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 1 to line 95, col 21 of module WriteThroughCache3_3: 163
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 1 to line 95, col 21 of module WriteThroughCache3_3: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 270
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 261
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 225
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 275
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 163
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 3, col 1 to line 3, col 47 of module Memory: 67
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 11, col 3 to line 13, col 49 of module InternalMemory: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 147, col 36 to line 147, col 39 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 147, col 42 to line 147, col 45 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 147, col 48 to line 147, col 51 of module WriteThroughCache3_3: 65
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(4) at 2023-11-24 22:45:01: 94 states generated (7,790 s/min), 65 distinct states found (5,386 ds/min), 50 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+94 states generated, 65 distinct states found, 50 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 727ms at (2023-11-24 22:45:01)
+@!@!@ENDMSG 2186 @!@!@

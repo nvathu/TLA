@@ -1,0 +1,282 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 79 and seed 5210044702066953173 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\CNTT\TLA+\submit file\stla23_04_Nguyen\LiveInternalMemory.tla
+Parsing file D:\CNTT\TLA+\submit file\stla23_04_Nguyen\InternalMemory.tla
+Parsing file D:\CNTT\TLA+\submit file\stla23_04_Nguyen\MemoryInterface.tla
+Semantic processing of module MemoryInterface
+Semantic processing of module InternalMemory
+Semantic processing of module LiveInternalMemory
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-12-03 21:31:58)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 3 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 8 distinct states generated at 2023-12-03 21:31:59.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(10) at 2023-12-03 21:32:01: 21,400 states generated, 4,408 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 3 branches of temporal properties for the complete state space with 13224 total distinct states at (2023-12-03 21:32:01)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2116:1 @!@!@
+Temporal properties were violated.
+
+@!@!@ENDMSG 2116 @!@!@
+@!@!@STARTMSG 2264:1 @!@!@
+The following behavior constitutes a counter-example:
+
+@!@!@ENDMSG 2264 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ mem = (a1 :> v1 @@ a2 :> v1 @@ a3 :> v1)
+/\ ctl = (p1 :> "rdy" @@ p2 :> "rdy")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p1, NoVal>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Req line 15, col 11 to line 20, col 26 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v1 @@ a3 :> v1)
+/\ ctl = (p1 :> "busy" @@ p2 :> "rdy")
+/\ buf = (p1 :> [op |-> "Wr", adr |-> a1, val |-> v2] @@ p2 :> NoVal)
+/\ memInt = <<p1, [op |-> "Wr", adr |-> a1, val |-> v2]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Req line 15, col 11 to line 20, col 26 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v1 @@ a3 :> v1)
+/\ ctl = (p1 :> "busy" @@ p2 :> "busy")
+/\ buf = ( p1 :> [op |-> "Wr", adr |-> a1, val |-> v2] @@
+  p2 :> [op |-> "Wr", adr |-> a2, val |-> v2] )
+/\ memInt = <<p2, [op |-> "Wr", adr |-> a2, val |-> v2]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Do line 23, col 3 to line 31, col 21 of module InternalMemory>
+/\ mem = (a1 :> v2 @@ a2 :> v1 @@ a3 :> v1)
+/\ ctl = (p1 :> "done" @@ p2 :> "busy")
+/\ buf = (p1 :> NoVal @@ p2 :> [op |-> "Wr", adr |-> a2, val |-> v2])
+/\ memInt = <<p2, [op |-> "Wr", adr |-> a2, val |-> v2]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Do line 23, col 3 to line 31, col 21 of module InternalMemory>
+/\ mem = (a1 :> v2 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "done" @@ p2 :> "done")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p2, [op |-> "Wr", adr |-> a2, val |-> v2]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Rsp line 33, col 11 to line 36, col 35 of module InternalMemory>
+/\ mem = (a1 :> v2 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "rdy" @@ p2 :> "done")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p1, NoVal>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <Req line 15, col 11 to line 20, col 26 of module InternalMemory>
+/\ mem = (a1 :> v2 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "busy" @@ p2 :> "done")
+/\ buf = (p1 :> [op |-> "Wr", adr |-> a1, val |-> v1] @@ p2 :> NoVal)
+/\ memInt = <<p1, [op |-> "Wr", adr |-> a1, val |-> v1]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <Rsp line 33, col 11 to line 36, col 35 of module InternalMemory>
+/\ mem = (a1 :> v2 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "busy" @@ p2 :> "rdy")
+/\ buf = (p1 :> [op |-> "Wr", adr |-> a1, val |-> v1] @@ p2 :> NoVal)
+/\ memInt = <<p2, NoVal>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <Do line 23, col 3 to line 31, col 21 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "done" @@ p2 :> "rdy")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p2, NoVal>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <Rsp line 33, col 11 to line 36, col 35 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "rdy" @@ p2 :> "rdy")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p1, NoVal>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <Req line 15, col 11 to line 20, col 26 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v2 @@ a3 :> v1)
+/\ ctl = (p1 :> "busy" @@ p2 :> "rdy")
+/\ buf = (p1 :> [op |-> "Wr", adr |-> a2, val |-> v1] @@ p2 :> NoVal)
+/\ memInt = <<p1, [op |-> "Wr", adr |-> a2, val |-> v1]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+12: <Do line 23, col 3 to line 31, col 21 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v1 @@ a3 :> v1)
+/\ ctl = (p1 :> "done" @@ p2 :> "rdy")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p1, [op |-> "Wr", adr |-> a2, val |-> v1]>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+13: <Rsp line 33, col 11 to line 36, col 35 of module InternalMemory>
+/\ mem = (a1 :> v1 @@ a2 :> v1 @@ a3 :> v1)
+/\ ctl = (p1 :> "rdy" @@ p2 :> "rdy")
+/\ buf = (p1 :> NoVal @@ p2 :> NoVal)
+/\ memInt = <<p1, NoVal>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2122:4 @!@!@
+2: Back to state: <Req line 15, col 11 to line 20, col 26 of module InternalMemory>
+
+@!@!@ENDMSG 2122 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 00s at 2023-12-03 21:32:01
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-12-03 21:32:01
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<IInit line 5, col 1 to line 5, col 5 of module InternalMemory>: 16:16
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 5, col 13 to line 5, col 30 of module InternalMemory: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 13 to line 6, col 40 of module InternalMemory: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 7, col 13 to line 7, col 40 of module InternalMemory: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 8, col 13 to line 8, col 33 of module InternalMemory: 16
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Req line 15, col 1 to line 15, col 6 of module InternalMemory>: 1962:14481
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 15, col 14 to line 15, col 27 of module InternalMemory: 10473
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 15, col 14 to line 15, col 19 of module InternalMemory: 8864
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 17, col 17 to line 19, col 52 of module InternalMemory: 14481
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 16, col 26 to line 16, col 29 of module InternalMemory: 1609
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 14 to line 20, col 26 of module InternalMemory: 14481
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Do line 22, col 1 to line 22, col 5 of module InternalMemory>: 1793:4758
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 6 to line 23, col 20 of module InternalMemory: 13617
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 6 to line 23, col 11 of module InternalMemory: 8859
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 24, col 6 to line 26, col 22 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 24, col 13 to line 26, col 22 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 24, col 16 to line 24, col 31 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 25, col 20 to line 25, col 58 of module InternalMemory: 3174
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 26, col 20 to line 26, col 22 of module InternalMemory: 1584
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 27, col 6 to line 29, col 55 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 27, col 13 to line 29, col 55 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 27, col 14 to line 27, col 16 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 27, col 25 to line 29, col 54 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 27, col 32 to line 29, col 54 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 27, col 35 to line 27, col 50 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 28, col 40 to line 28, col 44 of module InternalMemory: 3174
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 29, col 40 to line 29, col 54 of module InternalMemory: 1584
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 30, col 6 to line 30, col 38 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 6 to line 31, col 21 of module InternalMemory: 4758
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Rsp line 33, col 1 to line 33, col 6 of module InternalMemory>: 645:2497
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 14 to line 33, col 28 of module InternalMemory: 11352
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 33, col 14 to line 33, col 19 of module InternalMemory: 8855
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 34, col 14 to line 34, col 46 of module InternalMemory: 2497
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 14 to line 35, col 44 of module InternalMemory: 2497
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 14 to line 36, col 35 of module InternalMemory: 2497
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(10) at 2023-12-03 21:32:01: 21,400 states generated (443,064 s/min), 4,408 distinct states found (91,262 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+21400 states generated, 4408 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 2903ms at (2023-12-03 21:32:01)
+@!@!@ENDMSG 2186 @!@!@

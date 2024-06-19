@@ -1,0 +1,46 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 94 and seed -8807917664765502110 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\CNTT\TLA+\stla23_11_Nguyen\VectorClockMC.tla
+Parsing file D:\CNTT\TLA+\stla23_11_Nguyen\VectorClock.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Integers.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Sequences.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module VectorClock
+Semantic processing of module VectorClockMC
+Semantic errors:
+
+*** Errors: 2
+
+line 12, col 18 to line 12, col 31 of module VectorClockMC
+
+Unknown operator: `HappenedBefore'.
+
+
+line 13, col 18 to line 13, col 31 of module VectorClockMC
+
+Unknown operator: `HappenedBefore'.
+
+
+
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2024-02-02 23:30:57)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 3002:1 @!@!@
+Parsing or semantic analysis failed.
+@!@!@ENDMSG 3002 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 154ms at (2024-02-02 23:30:57)
+@!@!@ENDMSG 2186 @!@!@

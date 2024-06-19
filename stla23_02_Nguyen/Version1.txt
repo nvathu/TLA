@@ -1,0 +1,67 @@
+java.exe -cp c:\Users\User\.vscode\extensions\alygin.vscode-tlaplus-1.5.4\tools\tla2tools.jar -XX:+UseParallelGC tlc2.TLC Version1.tla -tool -modelcheck -coverage 1 -config Version1.cfg
+
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+Running breadth-first search Model-Checking with fp 116 and seed 6913781129383301403 with 1 worker on 8 cores with 227MB heap and 64MB offheap memory (Windows 10 10.0 x86, Oracle Corporation 1.8.0_271 x86, MSBDiskFPSet, DiskStateQueue).
+Starting SANY...
+Parsing file D:\CNTT\TLA+\stla_assignment_02\Version1.tla
+Parsing file D:\CNTT\TLA+\stla_assignment_02\Channel.tla
+Parsing file D:\CNTT\TLA+\stla_assignment_02\HourClock.tla
+Parsing file C:\Users\User\AppData\Local\Temp\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Channel
+Semantic processing of module HourClock
+Semantic processing of module Version1
+SANY finished.
+Starting... (2023-11-17 21:32:34)
+The subscript of the next-state relation specified by the specification
+does not seem to contain the state variable hr
+Computing initial states...
+Computed 2 initial states...
+Computed 4 initial states...
+Computed 8 initial states...
+Computed 16 initial states...
+Computed 32 initial states...
+Computed 64 initial states...
+Computed 128 initial states...
+Computed 256 initial states...
+Finished computing initial states: 288 distinct states generated at 2023-11-17 21:32:35.
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 4.9E-15
+The coverage statistics at 2023-11-17 21:32:35
+<InitV1 line 6, col 1 to line 6, col 6 of module Version1>: 288:576
+  line 4, col 22 to line 4, col 34 of module Version1: 1
+  line 4, col 12 to line 4, col 27 of module HourClock: 288
+  |line 4, col 20 to line 4, col 26 of module HourClock: 48
+  line 7, col 14 to line 7, col 17 of module Version1: 576
+<TickSend line 9, col 1 to line 9, col 8 of module Version1>: 24:288
+  line 5, col 12 to line 5, col 46 of module HourClock: 288
+  |line 5, col 18 to line 5, col 46 of module HourClock: 312
+  ||line 5, col 21 to line 5, col 27 of module HourClock: 312
+  ||line 5, col 34 to line 5, col 39 of module HourClock: 286
+  line 11, col 16 to line 11, col 34 of module Channel: 600
+  |line 11, col 16 to line 11, col 23 of module Channel: 312
+  |line 11, col 27 to line 11, col 34 of module Channel: 312
+  line 12, col 16 to line 12, col 61 of module Channel: 288
+  line 10, col 21 to line 10, col 22 of module Version1: 288
+<TickReceive line 12, col 1 to line 12, col 11 of module Version1>: 0:24
+  line 14, col 16 to line 14, col 34 of module Channel: 336
+  |line 14, col 16 to line 14, col 23 of module Channel: 312
+  |line 14, col 27 to line 14, col 34 of module Channel: 312
+  line 15, col 16 to line 15, col 50 of module Channel: 24
+  line 6, col 20 to line 6, col 70 of module Channel: 48
+  |line 6, col 20 to line 6, col 23 of module Channel: 24
+  |line 6, col 29 to line 6, col 70 of module Channel: 24
+  line 5, col 12 to line 5, col 46 of module HourClock: 24
+  |line 5, col 18 to line 5, col 46 of module HourClock: 24
+  ||line 5, col 21 to line 5, col 27 of module HourClock: 24
+  ||line 5, col 34 to line 5, col 39 of module HourClock: 22
+<TypeInvariantV1 line 4, col 1 to line 4, col 15 of module Version1>
+  line 4, col 22 to line 4, col 43 of module Version1: 312
+End of statistics.
+Progress(2) at 2023-11-17 21:32:35: 600 states generated (66,914 s/min), 312 distinct states found (34,795 ds/min), 0 states left on queue.
+600 states generated, 312 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 2.
+The average outdegree of the complete state graph is 0 (minimum is 0, the maximum 1 and the 95th percentile is 1).
+Finished in 540ms at (2023-11-17 21:32:35)
